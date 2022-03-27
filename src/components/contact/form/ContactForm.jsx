@@ -3,43 +3,38 @@ import "../../../styles/components/contact/form/ContactForm.scss";
 const ContactForm = () => {
   return (
     <form
-      className="contactSection__form"
+      className="contactForm"
       action="https://formspree.io/f/mdoyqqaa"
       method="post"
     >
-      <label htmlFor="">
+      <label htmlFor="" className="contactForm__label">
         Nombre y Apellidos
-        <input id="" className="" type="text" />
+        <input
+          id=""
+          className="contactForm__label--input"
+          placeholder="NAME"
+          type="text"
+        />
       </label>
-      <label for="emailAddress">
+      <label for="emailAddress" className="contactForm__label">
         Email <span className="highlight">*</span>
+        <input
+          className="contactForm__label--input"
+          placeholder="nombre@gmail.com"
+          id="emailAddress"
+          type="email"
+          name="email"
+          title="Introduce un email válido"
+          pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[.][a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
+          required
+        />
       </label>
-      <input
-        className="contact__form--item emailAddress"
-        placeholder="nombre.apellidos@mail.com"
-        id="emailAddress"
-        type="email"
-        name="email"
-        title="Introduce un email válido"
-        pattern="^[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?.)+[.][a-z0-9](?:[a-z0-9-]*[a-z0-9])?$"
-        required
-      />
-
-      <div class="app-form">
-        <div class="app-form-group">
-          <input class="app-form-control" placeholder="NAME" />
-        </div>
-        <div class="app-form-group">
-          <input class="app-form-control" placeholder="EMAIL" />
-        </div>
-
-        <div class="app-form-group message">
-          <input class="app-form-control" placeholder="MESSAGE" />
-        </div>
-        <div class="app-form-group buttons">
-          <button class="app-form-button">CANCEL</button>
-          <button class="app-form-button">SEND</button>
-        </div>
+      <label className="contactForm__label">
+        <input className="contactForm__label--input" placeholder="MESSAGE" />
+      </label>
+      <div className="app-form-group buttons">
+        <button className="app-form-button">CANCEL</button>
+        <button className="app-form-button">SEND</button>
       </div>
     </form>
   );
