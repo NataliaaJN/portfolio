@@ -3,8 +3,15 @@
 .contactSection {
   display: grid;
   justify-content: center;
-  height: 93vh;
+  margin: 70px 0;
+  height: 75vh;
   background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+
+  @include desktop {
+    margin: 0;
+    height: 93vh;
+    width: 80%;
+  }
 
   @include desktopMax {
     margin: 60px auto;
