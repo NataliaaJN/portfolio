@@ -8,3 +8,9 @@
       @content;
     }
   }
+
+  @mixin desktopMax {
+    @media (min-width: 1400px) {
+      @content;
+    }
+  }

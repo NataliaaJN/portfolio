@@ -1,50 +1,56 @@
+@import "../../../core/mixins";
+@import "../../../core/variables";
+
 .contactForm {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 
-    &__label {
-        margin-bottom: 15px;
+  &__label {
+    margin-bottom: 15px;
+    color: $secondaryColor;
 
-        &--input {
-            width: 100%;
-            padding: 10px 0;
-            background: none;
-            border: none;
-            border-bottom: 1px solid #666;
-            color: #ddd;
-            font-size: 14px;
-            text-transform: uppercase;
-            outline: none;
-            transition: border-color 0.2s;
-          }
+    &--input {
+      width: 100%;
+      padding: 10px 0;
+      background: none;
+      border: none;
+      border-bottom: 1px solid #666;
+      // color:#ddd;
+      color: $secondaryColor;
+      font-size: 14px;
+      outline: none;
+      transition: border-color 0.2s;
+    }
 
-          &--input::placeholder {
-            color: #666;
-          }
-          
-          &--input:focus {
-            border-bottom-color: #ddd;
-          }
-      }
+    &--input::placeholder {
+      color: #666;
+    }
+
+    &--input:focus {
+      // border-bottom-color: #ddd;
+      border-bottom-color: $mainColor;
+    }
   }
 
-
-// buttons
-
-.app-form-group.buttons {
+  &__buttons {
     margin-bottom: 0;
     text-align: right;
-  }
 
-.app-form-button {
-    background: none;
-    border: none;
+    &--cancelBtn, &--sendBtn {
+      background: none;
+      border: none;
+      color: #ea1d6f;
+      font-size: 14px;
+      cursor: pointer;
+      outline: none;
+    }
+    &--cancelBtn:hover, &--sendBtn:hover {
+      color: #b9134f;
+    }
+  }
+  .highlight{
     color: #ea1d6f;
-    font-size: 14px;
-    cursor: pointer;
-    outline: none;
   }
-  
-  .app-form-button:hover {
-    color: #b9134f;
-  }
+}
+
+

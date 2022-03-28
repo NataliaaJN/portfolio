@@ -21,7 +21,7 @@ const Contact = () => {
             <div class="screen-body-item left">
               <div class="app-title">
                 <span>CONTACT</span>
-                <span>US</span>
+                <span>ME</span>
               </div>
             </div>
 

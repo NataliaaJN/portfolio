@@ -1,13 +1,22 @@
+@import "../../core/mixins";
+@import "../../core/variables";
 .contactSection {
-  height: 95vh;
-  background-color: black;
   display: grid;
-  align-content: center;
   justify-content: center;
+  height: 93vh;
   background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
+
+  @include desktopMax {
+    margin: 60px auto;
+    height: 80vh;
+    width: 80%;
+    box-shadow: 5px 5px 14px rgb(192, 101, 101);
+  }
 
   &__formContainer {
     padding: 10px;
+    display: grid;
+    align-content: center;
 
     &--screen {
       position: relative;
@@ -108,7 +117,7 @@
   position: absolute;
   left: 0;
   bottom: -10px;
-  width: 25px;
+  width: 40px;
   height: 4px;
   background: #ea1d6f;
 }
@@ -124,7 +133,7 @@
 
 
 
-@media screen and (max-width: 520px) {
+@media (max-width: 520px) {
   .screen-body {
     flex-direction: column;
   }
@@ -146,7 +155,7 @@
   }
 }
 
-@media screen and (max-width: 600px) {
+@media (max-width: 600px) {
   .screen-body {
     padding: 40px;
   }

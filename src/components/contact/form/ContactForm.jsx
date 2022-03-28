@@ -4,19 +4,19 @@ const ContactForm = () => {
   return (
     <form
       className="contactForm"
-      action="https://formspree.io/f/mdoyqqaa"
+      action="https://formspree.io/f/mzboaewg"
       method="post"
     >
       <label htmlFor="" className="contactForm__label">
-        Nombre y Apellidos
+        Nombre y Apellidos <span class="highlight">*</span>
         <input
           id=""
           className="contactForm__label--input"
-          placeholder="NAME"
+          placeholder="Nombre"
           type="text"
         />
       </label>
-      <label for="emailAddress" className="contactForm__label">
+      <label htmlFor="emailAddress" className="contactForm__label">
         Email <span className="highlight">*</span>
         <input
           className="contactForm__label--input"
@@ -29,12 +29,22 @@ const ContactForm = () => {
           required
         />
       </label>
-      <label className="contactForm__label">
-        <input className="contactForm__label--input" placeholder="MESSAGE" />
+      <label htmlFor="message" className="contactForm__label">
+        Mensaje <span class="highlight">*</span>
+        <textarea
+          id="message"
+          name="message"
+          rows="5"
+          cols="50"
+          className="contactForm__label--input"
+          placeholder="Hola Natalia, ¿qué tal? Me encantaría que te unieses a nuestro equipo 😜"
+        />
       </label>
-      <div className="app-form-group buttons">
-        <button className="app-form-button">CANCEL</button>
-        <button className="app-form-button">SEND</button>
+      <div className="contactForm__buttons">
+        <button className="contactForm__buttons--cancelBtn">CANCEL</button>
+        <button type="submit" className="contactForm__buttons--sendBtn">
+          SEND
+        </button>
       </div>
     </form>
   );
