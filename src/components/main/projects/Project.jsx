@@ -1,5 +1,7 @@
 import React from "react";
 import { useState } from "react";
+import "../../../styles/components/main/projects/Project.scss";
+
 const Project = ({
   projectImg,
   projectAlt,
@@ -68,13 +70,13 @@ const Project = ({
   return (
     <li className="projectElement">
       <div className="projectElement__projectContainer">
-        <h3>{projectName}</h3>
         <img
           className="projectElement__projectContainer--photo"
           src={projectImg}
           alt={projectAlt}
         />
-        <div>{getTechnologiesUsed()}</div>
+        <h3 className="projectElement__projectContainer--projectName">{projectName}</h3>
+        {/* <div className="projectElement__projectContainer--technologiesContainer">{getTechnologiesUsed()}</div> */}
       </div>
     </li>
   );

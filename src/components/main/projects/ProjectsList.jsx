@@ -1,3 +1,4 @@
+import "../../../styles/components/main/projects/ProjectsList.scss";
 import Project from "./Project";
 import portfolioImg from "../../../images/portfolio-web.png";
 import benderImg from "../../../images/bender-web.png";
@@ -5,7 +6,7 @@ import harryPotterImg from "../../../images/harry-potter-web.png";
 import animenetImg from "../../../images/animenet-web.png";
 import hangmanImg from "../../../images/hangman-game-web.png";
 import awesomeCardsImg from "../../../images/awesome-cards-web.png";
-import rockPaperScissorsImg from "../../../images/rock-paper-scissors-web.png";
+// import rockPaperScissorsImg from "../../../images/rock-paper-scissors-web.png";
 
 const ProjectsList = () => {
   return (
