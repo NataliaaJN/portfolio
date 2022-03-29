@@ -6,32 +6,46 @@ const Project = ({
   technologies,
 }) => {
   const [isShown, setIsShown] = useState(false);
- 
+  const [technologieIcon, setTechnologieIcon] = useState([]);
 
   const getTechnologiesUsed = () => {
-    technologies.map((eachTech) => {
-      
-      let technologiesUsed;
+    technologies.forEach((eachTech) => {
+      let technologiesUsed = [];
       if (eachTech === "html") {
-        // return technologiesUsed= <i className= "fa-brands fa-html5"></i>;
-        return console.log(<p>hola</p>);
-      } else if (eachTech === "css") {
-        return technologiesUsed= <i className= "fa-brands fa-css3-alt"></i>;
-      } else if (eachTech === "sass") {
-        return technologiesUsed= <i className= "fa-brands fa-sass"></i>;
-      } else if (eachTech === "gulp") {
-        return technologiesUsed = <i className= "fa-brands fa-gulp"></i>;
-      } else if (eachTech === "js") {
-        return technologiesUsed= <i className= "fa-brands fa-js-square"></i>;
-      } else if (eachTech === "react") {
-        return technologiesUsed= <i className= "fa-brands fa-react"></i>;
-      } else if (eachTech === "node") {
-        return technologiesUsed= <i className= "fa-brands fa-node-js"></i>;
+        // return "fa-brands fa-html5"
+
+        // return technologiesUsed= "fa-brands fa-html5"
+        // return setTech(tecnologiesused)
+
+        // <i className="fa-brands fa-html5"></i>;
+        return [...technologiesUsed, "fa-brands fa-html5"];
+      }
+      if (eachTech === "css") {
+        // <i className="fa-brands fa-css3-alt"></i>
+        return [...technologiesUsed, "fa-brands fa-css3-alt"];
+      }
+      if (eachTech === "sass") {
+        // <i className="fa-brands fa-sass"></i>
+        return [...technologiesUsed, "fa-brands fa-sass"];
+      }
+      if (eachTech === "gulp") {
+        return [...technologiesUsed, "fa-brands fa-gulp"];
+      }
+      if (eachTech === "js") {
+        return [...technologiesUsed, "fa-brands fa-js-square"];
+      }
+      if (eachTech === "react") {
+        return [...technologiesUsed, "fa-brands fa-react"];
+      }
+      if (eachTech === "node") {
+        return [...technologiesUsed, "fa-brands fa-node-js"];
       }
       return technologiesUsed;
     });
   };
+  getTechnologiesUsed();
   console.log(getTechnologiesUsed());
+  // console.log(getTechnologiesUsed());
   const renderProjectDescription = () => {
     // eslint-disable-next-line no-restricted-globals
     if (screen.width >= 1024)
@@ -40,7 +54,7 @@ const Project = ({
           <p className="photoElement__hoverAuthorContainer--author">
             {projectDescription}
           </p>
-          {getTechnologiesUsed()}
+          <p>{getTechnologiesUsed()}</p>
         </>
       );
   };
