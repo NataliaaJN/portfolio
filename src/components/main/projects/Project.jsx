@@ -12,37 +12,46 @@ const Project = ({
   // const [technologieIcon, setTechnologieIcon] = useState([]);
 
   const getTechnologiesUsed = () => {
-    const technologiesUsed= React.Children.toArray(technologies.map((eachTech) => {
-      let technologieIcons = [];
-      if (eachTech === "html") {
-        
-        return [...technologieIcons, <i className="fa-brands fa-html5"></i>];
-      }
-      if (eachTech === "css") {
-        return [...technologieIcons, <i className="fa-brands fa-css3-alt"></i>];
-      }
-      if (eachTech === "sass") {
-        return [...technologieIcons, <i className="fa-brands fa-sass"></i>];
-      }
-      if (eachTech === "gulp") {
-        return [...technologieIcons, <i className="fa-brands fa-gulp"></i>];
-      }
-      if (eachTech === "js") {
-        return [...technologieIcons, <i className="fa-brands fa-js-square"></i>];
-      }
-      if (eachTech === "react") {
-        return [...technologieIcons, <i className="fa-brands fa-react"></i>];
-      }
-      if (eachTech === "node") {
-        return [...technologieIcons, <i className="fa-brands fa-node-js"></i>];
-      }
-      return technologieIcons
-    }));
+    const technologiesUsed = React.Children.toArray(
+      technologies.map((eachTech) => {
+        let technologieIcons = [];
+        if (eachTech === "html") {
+          return [...technologieIcons, <i className="fa-brands fa-html5"></i>];
+        }
+        if (eachTech === "css") {
+          return [
+            ...technologieIcons,
+            <i className="fa-brands fa-css3-alt"></i>,
+          ];
+        }
+        if (eachTech === "sass") {
+          return [...technologieIcons, <i className="fa-brands fa-sass"></i>];
+        }
+        if (eachTech === "gulp") {
+          return [...technologieIcons, <i className="fa-brands fa-gulp"></i>];
+        }
+        if (eachTech === "js") {
+          return [
+            ...technologieIcons,
+            <i className="fa-brands fa-js-square"></i>,
+          ];
+        }
+        if (eachTech === "react") {
+          return [...technologieIcons, <i className="fa-brands fa-react"></i>];
+        }
+        if (eachTech === "node") {
+          return [
+            ...technologieIcons,
+            <i className="fa-brands fa-node-js"></i>,
+          ];
+        }
+        return technologieIcons;
+      })
+    );
     return technologiesUsed;
-  }
-  const tech= getTechnologiesUsed().map(each => <div>{each}</div>);
-  //  console.log(getTechnologiesUsed());
-  const renderProjectDescription = () => {
+  };
+  
+  const renderProjectInfo = () => {
     // eslint-disable-next-line no-restricted-globals
     if (screen.width >= 1024)
       return (
@@ -50,7 +59,8 @@ const Project = ({
           <p className="photoElement__hoverAuthorContainer--author">
             {projectDescription}
           </p>
-          {tech}
+
+          <div>{getTechnologiesUsed()}</div>
         </>
       );
   };
@@ -64,7 +74,7 @@ const Project = ({
           src={projectImg}
           alt={projectAlt}
         />
-        {tech}
+        <div>{getTechnologiesUsed()}</div>
       </div>
     </li>
   );
