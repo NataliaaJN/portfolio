@@ -10,36 +10,7 @@ const ProjectsList = () => {
           projectDescription="Evaluación Final módulo 1 Adalab"
           technologies={["html", "sass"]}
         />
-        <Project
-          projectImg=""
-          projectName="Anonymous Proxy"
-          projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies={[]}
-        />
-        <Project
-          projectImg=""
-          projectName="Anonymous Proxy"
-          projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies={[]}
-        />
-        <Project
-          projectImg=""
-          projectName="Anonymous Proxy"
-          projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies={[]}
-        />
-        <Project
-          projectImg=""
-          projectName="Anonymous Proxy"
-          projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies={[]}
-        />
-        <Project
-          projectImg=""
-          projectName="Anonymous Proxy"
-          projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies={[]}
-        />
+        
       </ul>
     </section>
   );

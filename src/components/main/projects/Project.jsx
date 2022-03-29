@@ -1,3 +1,4 @@
+import React from "react";
 import { useState } from "react";
 const Project = ({
   projectImg,
@@ -9,8 +10,9 @@ const Project = ({
   const [technologieIcon, setTechnologieIcon] = useState([]);
 
   const getTechnologiesUsed = () => {
-    technologies.forEach((eachTech) => {
-      let technologiesUsed = [];
+    const tech= React.Children.toArray(technologies.map((eachTech) => {
+      //  console.log(eachTech)
+      let technologieIcon = [];
       if (eachTech === "html") {
         // return "fa-brands fa-html5"
 
@@ -18,34 +20,33 @@ const Project = ({
         // return setTech(tecnologiesused)
 
         // <i className="fa-brands fa-html5"></i>;
-        return [...technologiesUsed, "fa-brands fa-html5"];
+        return <i className="fa-brands fa-html5"></i>;
       }
-      if (eachTech === "css") {
-        // <i className="fa-brands fa-css3-alt"></i>
-        return [...technologiesUsed, "fa-brands fa-css3-alt"];
-      }
-      if (eachTech === "sass") {
-        // <i className="fa-brands fa-sass"></i>
-        return [...technologiesUsed, "fa-brands fa-sass"];
-      }
-      if (eachTech === "gulp") {
-        return [...technologiesUsed, "fa-brands fa-gulp"];
-      }
-      if (eachTech === "js") {
-        return [...technologiesUsed, "fa-brands fa-js-square"];
-      }
-      if (eachTech === "react") {
-        return [...technologiesUsed, "fa-brands fa-react"];
-      }
-      if (eachTech === "node") {
-        return [...technologiesUsed, "fa-brands fa-node-js"];
-      }
-      return technologiesUsed;
-    });
-  };
-  getTechnologiesUsed();
+      // if (eachTech === "css") {
+      //   // <i className="fa-brands fa-css3-alt"></i>
+      //   return "fa-brands fa-css3-alt";
+      // }
+      // if (eachTech === "sass") {
+      //   // <i className="fa-brands fa-sass"></i>
+      //   return "fa-brands fa-sass";
+      // }
+      // if (eachTech === "gulp") {
+      //   return "fa-brands fa-gulp";
+      // }
+      // if (eachTech === "js") {
+      //   return "fa-brands fa-js-square";
+      // }
+      // if (eachTech === "react") {
+      //   return "fa-brands fa-react";
+      // }
+      // if (eachTech === "node") {
+      //   return "fa-brands fa-node-js";
+      // }
+    }));
+    return tech;
+  }
   console.log(getTechnologiesUsed());
-  // console.log(getTechnologiesUsed());
+  //  console.log(getTechnologiesUsed());
   const renderProjectDescription = () => {
     // eslint-disable-next-line no-restricted-globals
     if (screen.width >= 1024)
@@ -68,6 +69,7 @@ const Project = ({
           src="pok"
           alt="s"
         />
+        <p>{getTechnologiesUsed()}</p>
       </div>
     </li>
   );
