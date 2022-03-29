@@ -8,37 +8,37 @@ const ProjectsList = () => {
           projectImg=""
           projectName="Anonymous Proxy"
           projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies=""
+          technologies={["html", "sass"]}
         />
         <Project
           projectImg=""
           projectName="Anonymous Proxy"
           projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies=""
+          technologies={[]}
         />
         <Project
           projectImg=""
           projectName="Anonymous Proxy"
           projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies=""
+          technologies={[]}
         />
         <Project
           projectImg=""
           projectName="Anonymous Proxy"
           projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies=""
+          technologies={[]}
         />
         <Project
           projectImg=""
           projectName="Anonymous Proxy"
           projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies=""
+          technologies={[]}
         />
         <Project
           projectImg=""
           projectName="Anonymous Proxy"
           projectDescription="Evaluación Final módulo 1 Adalab"
-          technologies=""
+          technologies={[]}
         />
       </ul>
     </section>

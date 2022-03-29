@@ -13,7 +13,8 @@
 }
 
 .app {
-  height: 100vh;
+  height: 100%;
+  background-attachment: fixed;
   background-color: rgb(39, 38, 38);
   padding: 30px;
 }

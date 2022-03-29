@@ -5,6 +5,7 @@ import Header from "./header/Header";
 import Contact from "./contact/Contact";
 import Main from "./main/Main";
 import IMac from "./IMac";
+import Cv from "./cv/cv";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           }
         />
 
+        <Route path="/cv" element={<Cv/>} />
         <Route path="/contacto" element={<Contact />} />
       </Routes>
     </div>

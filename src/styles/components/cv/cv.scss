@@ -1,0 +1,12 @@
+.cvSection {
+  display: grid;
+  justify-content: center;
+
+  &__imgContainer {
+    height: 700px;
+    &--cv {
+      height: 100%;
+      
+    }
+  }
+}

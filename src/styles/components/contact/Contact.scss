@@ -8,13 +8,12 @@
   background: linear-gradient(to right, #ea1d6f 0%, #eb466b 100%);
 
   @include desktop {
-    margin: 0;
-    height: 93vh;
+    margin: 50px auto;
+    height: 95%;
     width: 80%;
   }
 
   @include desktopMax {
-    margin: 60px auto;
     height: 80vh;
     width: 80%;
     box-shadow: 5px 5px 14px rgb(192, 101, 101);
