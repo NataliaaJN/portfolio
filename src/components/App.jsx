@@ -7,7 +7,7 @@ import Main from "./main/Main";
 import IMac from "./IMac";
 import Cv from "./cv/cv";
 
-function App() {
+const App = ()=> {
   return (
     <div className="app">
       <Routes>

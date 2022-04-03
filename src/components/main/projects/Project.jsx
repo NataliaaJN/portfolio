@@ -52,7 +52,7 @@ const Project = ({
     );
     return technologiesUsed;
   };
-  
+
   const renderProjectInfo = () => {
     // eslint-disable-next-line no-restricted-globals
     if (screen.width >= 1024)
@@ -72,10 +72,18 @@ const Project = ({
       <div className="projectElement__projectContainer">
         <img
           className="projectElement__projectContainer--photo"
-          src={projectImg}
+          src={`../images/${projectImg}`}
           alt={projectAlt}
         />
-        <h3 className="projectElement__projectContainer--projectName">{projectName}</h3>
+        {/* <img
+          className="projectElement__projectContainer--photo"
+          src={projectImg}
+          alt={projectAlt}
+        /> */}
+        {renderProjectInfo()}
+        <h3 className="projectElement__projectContainer--projectName">
+          {projectName}
+        </h3>
         {/* <div className="projectElement__projectContainer--technologiesContainer">{getTechnologiesUsed()}</div> */}
       </div>
     </li>
