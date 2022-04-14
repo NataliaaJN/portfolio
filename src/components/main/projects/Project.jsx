@@ -72,7 +72,7 @@ const Project = ({
       <div className="projectElement__projectContainer">
         <img
           className="projectElement__projectContainer--photo"
-          src={`../images/${projectImg}`}
+          src={`../static/images/${projectImg}`}
           alt={projectAlt}
         />
         {/* <img
